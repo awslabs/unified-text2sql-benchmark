@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "unified-text2sql-benchmark"
+version = "0.1.0"
+description = "A collection of publicly available Text2SQL databases, converted to the unified-format."
+authors = ["Anuj Chauhan", "Marvin Dong", "Joe Lilien", "Jun Wang"]
+readme = "README.md"
+packages = [{include = "unified_text2sql_benchmark"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.5.2"
+tqdm = "^4.64.1"
+sqlglot = "^10.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
