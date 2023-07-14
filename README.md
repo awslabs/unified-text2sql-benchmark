@@ -1,5 +1,15 @@
 # UNITE: A Unified Benchmark for Text-to-SQL Evaluation
-This benchmark is composed of 18 publicly available text-to-SQL datasets, containing natural language questions from more than 12 domains, SQL queries from more than 3.9K patterns, and 29K databases. 
+This benchmark is composed of 18 publicly available text-to-SQL datasets, containing natural language questions from more than 12 domains, SQL queries from more than 3.9K patterns, and 29K databases. Compared to the widely used Spider benchmark, we introduce ∼120K additional examples and a threefold increase in SQL patterns, such as comparative and boolean questions. More details can be found in this [paper](https://arxiv.org/abs/2305.16265):
+`
+@misc{lan2023unite,
+      title={UNITE: A Unified Benchmark for Text-to-SQL Evaluation}, 
+      author={Wuwei Lan and Zhiguo Wang and Anuj Chauhan and Henghui Zhu and Alexander Li and Jiang Guo and Sheng Zhang and Chung-Wei Hang and Joseph Lilien and Yiqun Hu and Lin Pan and Mingwen Dong and Jun Wang and Jiarong Jiang and Stephen Ash and Vittorio Castelli and Patrick Ng and Bing Xiang},
+      year={2023},
+      eprint={2305.16265},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+`
 
 
 ## Setup
