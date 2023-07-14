@@ -90,14 +90,17 @@ arguments:
 ## References:
 
 1. Spider: https://github.com/taoyds/spider
-1. SQUALL: https://github.com/tzshi/squall
 1. WikiSQL: https://github.com/salesforce/WikiSQL
+1. SQUALL: https://github.com/tzshi/squall
 1. Spider-Syn: https://github.com/ygan/Spider-Syn
+1. Criteria2SQL: https://github.com/xiaojingyu92/Criteria2SQL
+1. SParC: https://github.com/taoyds/sparc
+1. CoSQL: https://github.com/taoyds/cosql
+1. Spider-DK: https://github.com/ygan/Spider-DK
 1. ParaphraseBench (Patients): https://github.com/DataManagementLab/ParaphraseBench
 1. XSP: https://github.com/google-research/language/tree/master/language/xsp
+1. KaggleDBQA: https://www.microsoft.com/en-us/research/publication/kaggledbqa-realistic-evaluation-of-text-to-sql-parsers/
 1. ACL: https://dl.acm.org/doi/10.1145/3430984.3431046
-1. Criteria2SQL: https://github.com/xiaojingyu92/Criteria2SQL
-1. Fiben: https://github.com/IBM/fiben-benchmark
 1. SEOSS: https://www.sciencedirect.com/science/article/pii/S2352340922004152
-1. SParC: https://github.com/taoyds/sparc
+1. Fiben: https://github.com/IBM/fiben-benchmark
 1. SQLGlot: https://github.com/tobymao/sqlglot
