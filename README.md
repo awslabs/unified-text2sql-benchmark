@@ -98,7 +98,7 @@ arguments:
 1. CoSQL: https://github.com/taoyds/cosql
 1. Spider-DK: https://github.com/ygan/Spider-DK
 1. ParaphraseBench (Patients): https://github.com/DataManagementLab/ParaphraseBench
-1. XSP: https://github.com/google-research/language/tree/master/language/xsp
+1. XSP (Restaurants): https://github.com/google-research/language/tree/master/language/xsp
 1. KaggleDBQA: https://www.microsoft.com/en-us/research/publication/kaggledbqa-realistic-evaluation-of-text-to-sql-parsers/
 1. ACL: https://dl.acm.org/doi/10.1145/3430984.3431046
 1. SEOSS: https://www.sciencedirect.com/science/article/pii/S2352340922004152
