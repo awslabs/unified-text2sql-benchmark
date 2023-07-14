@@ -1,4 +1,6 @@
 # UNITE: A Unified Benchmark for Text-to-SQL Evaluation
+This benchmark is composed of 18 publicly available text-to-SQL datasets, containing natural language questions from more than 12 domains, SQL queries from more than 3.9K patterns, and 29K databases. 
+
 
 ## Setup
 This project uses [Poetry](https://python-poetry.org/docs/) for managing dependencies. For getting the appropriate python version you can look into [PyEnv](https://github.com/pyenv/pyenv). 
