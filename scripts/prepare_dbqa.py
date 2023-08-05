@@ -4,7 +4,7 @@ import os
 import json
 import shutil
 
-OG_DIR = "original/kaggle-dbqa/"
+OG_DIR = "original/KaggleDBQA/"
 OUTPUT_DIR = "unified/dbqa/"
 OUTPUT_DEV_FILE = os.path.join(OUTPUT_DIR, "dev.jsonl")
 
