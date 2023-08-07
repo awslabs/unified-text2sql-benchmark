@@ -20,8 +20,16 @@ can allow you to install a specific version using `pyenv` and letting poetry kno
 
 Clone the original datasets into the `original` folder. 
 
-## Download
-There is `download.sh` script in `original` folder, type `./download.sh` to get all the datasets in original formats, remember to check some warnings for manual download.
+## Data
+To get all the datasets from in their original formats:
+
+```
+cd original
+./download.sh
+```
+
+
+#### Note: Remember to check the warnings for some datasets which require manual download.
 
 ## Usage
 
