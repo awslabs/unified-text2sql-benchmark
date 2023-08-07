@@ -68,7 +68,8 @@ if ! (test -d fiben-benchmark)
 then
     echo "************************ DOWNLOADING DATASET: FIBEN ************************"
     git clone https://github.com/IBM/fiben-benchmark.git
-
+    unzip fiben-benchmark/data.zip -d fiben-benchmark
+    rm fiben-benchmark/data.zip
 else
     echo "FIBEN is already downloaded."
 fi
