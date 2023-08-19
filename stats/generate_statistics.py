@@ -10,6 +10,11 @@ from time import time, strftime, gmtime
 from sqlglot import parse_one, exp, transpile
 
 STATS_OUTPUT_DIR = "stats/output"
+STATS_ERRORS_DIR = f"stats/parsing_errors"
+
+os.makedirs(STATS_OUTPUT_DIR, exist_ok=True)
+os.makedirs(STATS_ERRORS_DIR, exist_ok=True)
+
 UNIFIED_DIR = "unified"
 ALL_DATABASES = os.listdir(UNIFIED_DIR)
 
@@ -27,7 +32,7 @@ def get_nlq_stats(jsonl_content, dataset):
         try:
             transpile(query)
         except Exception as e:
-            error_file = f"{STATS_OUTPUT_DIR}/parsing_errors/{dataset}"
+            error_file = f"{STATS_ERRORS_DIR}/{dataset}"
             if os.path.exists(error_file):
                 os.unlink(error_file)
 
@@ -130,9 +135,7 @@ def get_redundancy_stats(jsonl_content):
         count += 1
         parsed_query = parse_one(query)
         distinct_sql_patterns[noramlize_sql(parsed_query)].append(query)
-        max_queries_per_pattern = max(
-            len(queries) for queries in distinct_sql_patterns.values()
-        )
+        max_queries_per_pattern = max(len(queries) for queries in distinct_sql_patterns.values())
         standard_deviation_of_queries_per_pattern = numpy.std(
             [len(queries) for queries in distinct_sql_patterns.values()]
         )
@@ -140,13 +143,9 @@ def get_redundancy_stats(jsonl_content):
     return {
         "nlqs": count,
         "unique_sql_patterns": len(distinct_sql_patterns),
-        "total_nlqs_by_unique_patterns": round(
-            count / len(distinct_sql_patterns), 2
-        ),
+        "total_nlqs_by_unique_patterns": round(count / len(distinct_sql_patterns), 2),
         "max_queries_per_pattern": max_queries_per_pattern,
-        "std_dev_queries_per_pattern": round(
-            standard_deviation_of_queries_per_pattern, 2
-        ),
+        "std_dev_queries_per_pattern": round(standard_deviation_of_queries_per_pattern, 2),
     }
 
 
@@ -170,9 +169,7 @@ def collect_dataset_level_statistics():
             if content == "tables.json":
                 db_schema_stats = {}
                 db_schema_stats["db_id"] = dataset
-                db_schema_stats.update(
-                    get_schema_stats(open(f"{DATASET_CONTENT_DIR}/{content}"))
-                )
+                db_schema_stats.update(get_schema_stats(open(f"{DATASET_CONTENT_DIR}/{content}")))
                 all_schema_stats.append(db_schema_stats)
 
             if content.endswith(".jsonl"):
@@ -231,14 +228,10 @@ def collect_unified_statisitcs():
 
                             unified_stats[normalized_sql] += 1
                         except Exception as e:
-                            print(
-                                f"Exception transforming: {parsed_query}: {e}"
-                            )
+                            print(f"Exception transforming: {parsed_query}: {e}")
                             continue
 
-    unified_stats = dict(
-        sorted(unified_stats.items(), key=lambda item: -item[1])
-    )
+    unified_stats = dict(sorted(unified_stats.items(), key=lambda item: -item[1]))
 
     json.dump(
         unified_stats,
