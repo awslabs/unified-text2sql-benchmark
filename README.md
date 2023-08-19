@@ -36,7 +36,9 @@ cd original
 There is one script per dataset in the `scripts` folder which published its output in the `unified` folder.
 
 Usage example:
-`poetry run python3 scripts/prepare_cosql.py`
+- `poetry run python3 scripts/prepare_cosql.py`
+- `poetry run python3 scripts/prepare_wikisql.py`
+- `poetry run python3 scripts/prepare_criteriasql.py`
 
 ## Data format for Unified Text2SQL.
 

@@ -41,13 +41,13 @@ then
     bzip2 -d wikisql/wikisql.json.bz2
 
     # TODO: Get the schemas
-    wget https://github.com/salesforce/WikiSQL/blob/master/data.tar.bz2?raw=true
-    mv data.tar.bz2?raw=true wikisql/data.tar.bz2
-    bzip2 -d wikisql/data.tar.bz2
-    tar -xzvf wikisql/data.tar
+    wget https://github.com/salesforce/WikiSQL/raw/master/data.tar.bz2
+    mv data.tar.bz2 wikisql/data.tar.bz2
+    tar xvjf wikisql/data.tar.bz2
 
     mv data/* wikisql/
     rm -rf data
+    rm wikisql/data.tar.bz2
 else
     echo "WikiSQL is already downloaded."
 fi

@@ -1,4 +1,8 @@
 .venv/*
 *.pyc
-/*/*
+.vscode/*
+
+unified/*
+original/*
 !original/download.sh
+stats/parsing_errors/*
