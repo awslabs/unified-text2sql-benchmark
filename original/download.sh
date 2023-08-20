@@ -98,7 +98,14 @@ fi
 if ! (test -d SEOSS-Queries)
 then
     echo "************************ DOWNLOADING DATASET: SEOSS-Queries ************************"
-    echo "!!WARNING!! please manually download dataset here: https://figshare.com/s/75ed49ef01ac2f83b3e2"
+    echo "Dataset source link: https://figshare.com/s/75ed49ef01ac2f83b3e2"
+
+    mkdir SEOSS-Queries
+    wget https://figshare.com/ndownloader/files/31898543
+    mv 31898543 SEOSS-Queries/
+
+    unzip SEOSS-Queries/31898543 -d SEOSS-Queries
+    rm SEOSS-Queries/31898543
 else
     echo "SEOSS-Queries is already downloaded."
 fi
