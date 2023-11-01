@@ -98,7 +98,7 @@ arguments:
   [database dir]     directory which contains sub-directories where each SQLite3 database is stored
 
 ```
-
+Note: to avoid SQL parsing error, we can use [function call](https://github.com/ServiceNow/picard/blob/main/seq2seq/metrics/spider/spider_test_suite.py#L9) in PICARD codebase.
 
 ## References:
 
