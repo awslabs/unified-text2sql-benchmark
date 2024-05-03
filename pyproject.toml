@@ -9,7 +9,7 @@ packages = [{include = "unified_text2sql_benchmark"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 pandas = "^1.5.2"
-tqdm = "^4.64.1"
+tqdm = "^4.66.3"
 sqlglot = "^10.4.0"
 
 
