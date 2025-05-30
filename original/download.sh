@@ -56,9 +56,7 @@ fi
 if ! (test -d kaggledbqa)
 then
     echo "************************ DOWNLOADING DATASET: KaggleDBQA ************************"
-    git clone https://github.com/chiahsuan156/KaggleDBQA.git
-
-    echo "!!WARNING!! please go to KaggleDBQA folder and manually download database here: https://drive.google.com/drive/folders/1oyLPukQRRwKG3KL1DJ84FqO7htkhtt0y"
+    echo "Please go to official KaggleDBQA github and download data manually: https://github.com/Chia-Hsuan-Lee/KaggleDBQA"
 else
     echo "KaggleDBQA is already downloaded."
 fi
